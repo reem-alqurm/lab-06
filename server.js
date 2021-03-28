@@ -5,7 +5,7 @@ const cors = require('cors'); // Api call our of domian
 const app = express(); // to use the express 
 app.use(cors());//to make the app to talke out of domin 
 const port = 7000; // to resive a port for my server (pc)
-app.listen( port , ()=>{console.log('conected server .......')});//to conect to server
+app.listen(process.env.port || port , ()=>{console.log('conected server .......')});//to conect to server
 
 function CityExpoler(search_query, formatted_query, latitude, longitude) {
     this.search_query = search_query,
